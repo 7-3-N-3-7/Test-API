@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: myapp
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Change "myrealm" to the actual realm name you create in Keycloak
+          issuer-uri: http://localhost:8080/realms/myrealm
