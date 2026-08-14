@@ -1,0 +1,2 @@
+2026-08-14 16:40:12,716  INFO [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8081"]
+2026-08-14 16:40:12,821  INFO [org.apache.catalina.core.StandardService] - Stopping service [Tomcat]
