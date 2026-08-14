@@ -1,0 +1,2 @@
+2026-08-14 16:02:43,573  INFO [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-auto-1"]
+2026-08-14 16:02:45,360  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'

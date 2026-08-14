@@ -39,6 +39,12 @@
             <groupId>org.gigaspaces</groupId>
             <artifactId>xap-openspaces</artifactId>
             <version>16.4.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mockito</groupId>
+                    <artifactId>mockito-all</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <!-- OpenAPI / Swagger -->
