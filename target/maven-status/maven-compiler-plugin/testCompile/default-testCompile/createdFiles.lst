@@ -1,0 +1,7 @@
+com\example\myapp\model\CachedItemTest.class
+com\example\myapp\cucumber\JSpaceStepDefinitions.class
+com\example\myapp\cucumber\CucumberTest.class
+com\example\myapp\cucumber\StepDefinitions.class
+com\example\myapp\config\SpaceConfigTest.class
+com\example\myapp\config\SecurityConfigTest.class
+com\example\myapp\controller\HelloControllerTest.class

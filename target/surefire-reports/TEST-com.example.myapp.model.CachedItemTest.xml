@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.myapp.cucumber.CucumberTest" time="1.931" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.myapp.model.CachedItemTest" time="0.005" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -9,7 +9,6 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
-    <property name="catalina.useNaming" value="false"/>
     <property name="user.timezone" value="Europe/Copenhagen"/>
     <property name="user.country.format" value="DK"/>
     <property name="java.vm.specification.version" value="22"/>
@@ -60,7 +59,6 @@
     <property name="localRepository" value="C:\Users\vase_\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\vase_\AppData\Local\Temp\"/>
-    <property name="catalina.home" value="C:\Users\vase_\AppData\Local\Temp\tomcat.0.18202924469098148814"/>
     <property name="java.version" value="22.0.2"/>
     <property name="user.dir" value="C:\Users\vase_\Desktop\api"/>
     <property name="os.arch" value="amd64"/>
@@ -69,7 +67,6 @@
     <property name="PID" value="15132"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
-    <property name="catalina.base" value="C:\Users\vase_\AppData\Local\Temp\tomcat.0.18202924469098148814"/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Users\vase_\.jdks\jdk-22\jdk-22.0.2+9\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\PowerShell\7;C:/Users/vase_/.gemini/antigravity/bin;C:\Users\vase_\AppData\Roaming\Antigravity\bin;C:\Python314\Scripts\;C:\Python314\;C:\Users\vase_\.jdks\jdk-25.0.3+9\bin;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\KeePassXC\;C:\Program Files\Gpg4win\..\GnuPG\bin;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-26\bin;C:\Program Files\apache-maven-3.9.14\bin;C:\Program Files\Go\bin;C:\Program Files\Yubico\YubiKey Manager CLI\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\PowerShell\7\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Users\vase_\AppData\Local\Programs\OpenAI\Codex\bin;C:\Users\vase_\.jdks\jdk-22\jdk-22.0.2+9\bin;C:\Users\vase_\AppData\Local\agy\bin;C:\Users\vase_\AppData\Local\Microsoft\WindowsApps;C:\Users\vase_\.dotnet\tools;C:\Users\vase_\AppData\Local\Microsoft\WinGet\Packages\Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\vase_\AppData\Local\Microsoft\WinGet\Packages\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\vase_\AppData\Local\Programs\Antigravity\bin;C:\Users\vase_\go\bin;C:\Users\vase_\AppData\Local\Programs\Antigravity IDE\bin;C:\Users\vase_\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\vase_\AppData\Local\PowerToys\DSCModules\;C:\Users\vase_\AppData\Local\Programs\lighttpd;C:\Users\vase_\AppData\Roaming\npm;C:\Users\vase_\.dotnet\tools;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -81,40 +78,6 @@
     <property name="java.class.version" value="66.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[myapp] "/>
   </properties>
-  <testcase name="Access public endpoint" classname="API Access" time="1.567">
-    <system-out><![CDATA[
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.2.5)
-
-2026-08-14T19:30:31.972+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.cucumber.StepDefinitions       : Starting StepDefinitions using Java 22.0.2 with PID 15132 (started by vase_ in C:\Users\vase_\Desktop\api)
-2026-08-14T19:30:31.973+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.cucumber.StepDefinitions       : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:30:32.494+02:00  INFO 15132 --- [myapp] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2026-08-14 19:30:32,529 CONFIG [com.gigaspaces.logger] - Log file: C:\Users\vase_\Desktop\api\logs\2026-08-14~19.30-gigaspaces-service-82.211.201.4-15132.log
-2026-08-14T19:30:32.661+02:00  INFO 15132 --- [myapp] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
-2026-08-14T19:30:32.878+02:00  INFO 15132 --- [myapp] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33bfa37a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5786d4d1, org.springframework.security.web.context.SecurityContextHolderFilter@64f599b2, org.springframework.security.web.header.HeaderWriterFilter@38922fa1, org.springframework.web.filter.CorsFilter@1d60919f, org.springframework.security.web.csrf.CsrfFilter@6d200ba9, org.springframework.security.web.authentication.logout.LogoutFilter@35a10a89, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@ef7156f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@965abc6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5497f68c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b8aa331, org.springframework.security.web.access.ExceptionTranslationFilter@67774b05, org.springframework.security.web.access.intercept.AuthorizationFilter@7af60b5d]
-2026-08-14T19:30:32.928+02:00  INFO 15132 --- [myapp] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:hsqldb:mem:ecf5766e-ca47-4e70-83aa-7c4e938157dd', username='sa'
-2026-08-14T19:30:33.057+02:00  INFO 15132 --- [myapp] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 62211 (http) with context path ''
-2026-08-14T19:30:33.062+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.cucumber.StepDefinitions       : Started StepDefinitions in 1.133 seconds (process running for 13.534)
-2026-08-14T19:30:33.391+02:00  INFO 15132 --- [myapp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-08-14T19:30:33.393+02:00  INFO 15132 --- [myapp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-]]></system-out>
-    <system-err><![CDATA[2026-08-14 19:30:32,521  INFO [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-auto-1"]
-2026-08-14 19:30:32,535  INFO [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
-2026-08-14 19:30:32,536  INFO [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-08-14 19:30:32,661  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
-2026-08-14 19:30:33,033  INFO [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-auto-1"]
-2026-08-14 19:30:33,391  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-]]></system-err>
-  </testcase>
-  <testcase name="Access secured endpoint without token" classname="API Access" time="0.045"/>
-  <testcase name="Write and read from jSpaces" classname="jSpaces Caching Behavior" time="0.134"/>
-  <testcase name="Update an existing item in jSpaces" classname="jSpaces Caching Behavior" time="0.015"/>
-  <testcase name="Read a non-existent item from jSpaces" classname="jSpaces Caching Behavior" time="0.014"/>
-  <testcase name="Delete an item from jSpaces" classname="jSpaces Caching Behavior" time="0.014"/>
-  <testcase name="Fail to write an item with an empty id" classname="jSpaces Caching Behavior" time="0.009"/>
+  <testcase name="testEmptyConstructorAndSetters" classname="com.example.myapp.model.CachedItemTest" time="0.003"/>
+  <testcase name="testParameterizedConstructor" classname="com.example.myapp.model.CachedItemTest" time="0.0"/>
 </testsuite>

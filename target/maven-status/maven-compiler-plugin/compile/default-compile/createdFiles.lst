@@ -1,0 +1,6 @@
+com\example\myapp\controller\HelloController.class
+com\example\myapp\config\SecurityConfig.class
+com\example\myapp\MyAppApplication.class
+com\example\myapp\config\SpaceConfig.class
+com\example\myapp\model\CachedItem.class
+com\example\myapp\service\CacheService.class

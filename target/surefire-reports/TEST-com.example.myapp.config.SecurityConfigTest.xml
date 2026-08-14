@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.myapp.cucumber.CucumberTest" time="1.931" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.myapp.config.SecurityConfigTest" time="10.318" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -9,7 +9,6 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
-    <property name="catalina.useNaming" value="false"/>
     <property name="user.timezone" value="Europe/Copenhagen"/>
     <property name="user.country.format" value="DK"/>
     <property name="java.vm.specification.version" value="22"/>
@@ -60,7 +59,6 @@
     <property name="localRepository" value="C:\Users\vase_\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\vase_\AppData\Local\Temp\"/>
-    <property name="catalina.home" value="C:\Users\vase_\AppData\Local\Temp\tomcat.0.18202924469098148814"/>
     <property name="java.version" value="22.0.2"/>
     <property name="user.dir" value="C:\Users\vase_\Desktop\api"/>
     <property name="os.arch" value="amd64"/>
@@ -69,7 +67,6 @@
     <property name="PID" value="15132"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
-    <property name="catalina.base" value="C:\Users\vase_\AppData\Local\Temp\tomcat.0.18202924469098148814"/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Users\vase_\.jdks\jdk-22\jdk-22.0.2+9\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\PowerShell\7;C:/Users/vase_/.gemini/antigravity/bin;C:\Users\vase_\AppData\Roaming\Antigravity\bin;C:\Python314\Scripts\;C:\Python314\;C:\Users\vase_\.jdks\jdk-25.0.3+9\bin;C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\KeePassXC\;C:\Program Files\Gpg4win\..\GnuPG\bin;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-26\bin;C:\Program Files\apache-maven-3.9.14\bin;C:\Program Files\Go\bin;C:\Program Files\Yubico\YubiKey Manager CLI\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\PowerShell\7\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Users\vase_\AppData\Local\Programs\OpenAI\Codex\bin;C:\Users\vase_\.jdks\jdk-22\jdk-22.0.2+9\bin;C:\Users\vase_\AppData\Local\agy\bin;C:\Users\vase_\AppData\Local\Microsoft\WindowsApps;C:\Users\vase_\.dotnet\tools;C:\Users\vase_\AppData\Local\Microsoft\WinGet\Packages\Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\vase_\AppData\Local\Microsoft\WinGet\Packages\Anthropic.ClaudeCode_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\vase_\AppData\Local\Programs\Antigravity\bin;C:\Users\vase_\go\bin;C:\Users\vase_\AppData\Local\Programs\Antigravity IDE\bin;C:\Users\vase_\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\vase_\AppData\Local\PowerToys\DSCModules\;C:\Users\vase_\AppData\Local\Programs\lighttpd;C:\Users\vase_\AppData\Roaming\npm;C:\Users\vase_\.dotnet\tools;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -81,8 +78,10 @@
     <property name="java.class.version" value="66.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[myapp] "/>
   </properties>
-  <testcase name="Access public endpoint" classname="API Access" time="1.567">
-    <system-out><![CDATA[
+  <testcase name="testPublicEndpointIsAccessible" classname="com.example.myapp.config.SecurityConfigTest" time="1.472">
+    <system-out><![CDATA[19:30:21.767 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.myapp.config.SecurityConfigTest]: SecurityConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:30:22.035 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.myapp.MyAppApplication for test class com.example.myapp.config.SecurityConfigTest
+
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
@@ -91,30 +90,44 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2026-08-14T19:30:31.972+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.cucumber.StepDefinitions       : Starting StepDefinitions using Java 22.0.2 with PID 15132 (started by vase_ in C:\Users\vase_\Desktop\api)
-2026-08-14T19:30:31.973+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.cucumber.StepDefinitions       : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:30:32.494+02:00  INFO 15132 --- [myapp] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2026-08-14 19:30:32,529 CONFIG [com.gigaspaces.logger] - Log file: C:\Users\vase_\Desktop\api\logs\2026-08-14~19.30-gigaspaces-service-82.211.201.4-15132.log
-2026-08-14T19:30:32.661+02:00  INFO 15132 --- [myapp] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
-2026-08-14T19:30:32.878+02:00  INFO 15132 --- [myapp] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33bfa37a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5786d4d1, org.springframework.security.web.context.SecurityContextHolderFilter@64f599b2, org.springframework.security.web.header.HeaderWriterFilter@38922fa1, org.springframework.web.filter.CorsFilter@1d60919f, org.springframework.security.web.csrf.CsrfFilter@6d200ba9, org.springframework.security.web.authentication.logout.LogoutFilter@35a10a89, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@ef7156f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@965abc6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5497f68c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b8aa331, org.springframework.security.web.access.ExceptionTranslationFilter@67774b05, org.springframework.security.web.access.intercept.AuthorizationFilter@7af60b5d]
-2026-08-14T19:30:32.928+02:00  INFO 15132 --- [myapp] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:hsqldb:mem:ecf5766e-ca47-4e70-83aa-7c4e938157dd', username='sa'
-2026-08-14T19:30:33.057+02:00  INFO 15132 --- [myapp] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 62211 (http) with context path ''
-2026-08-14T19:30:33.062+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.cucumber.StepDefinitions       : Started StepDefinitions in 1.133 seconds (process running for 13.534)
-2026-08-14T19:30:33.391+02:00  INFO 15132 --- [myapp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-08-14T19:30:33.393+02:00  INFO 15132 --- [myapp] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-14T19:30:23.270+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.config.SecurityConfigTest      : Starting SecurityConfigTest using Java 22.0.2 with PID 15132 (started by vase_ in C:\Users\vase_\Desktop\api)
+2026-08-14T19:30:23.273+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.config.SecurityConfigTest      : No active profile set, falling back to 1 default profile: "default"
+2026-08-14T19:30:25.396+02:00 ERROR 15132 --- [myapp] [           main] com.gigaspaces.security.openid           : Error while reading security properties - C:\Users\vase_\Desktop\api\config\security\security.properties (The system cannot find the path specified)
+2026-08-14T19:30:25.605+02:00  INFO 15132 --- [myapp] [           main] com.gigaspaces.container                 : Starting space...
+**************************************************** System Report *****************************************************
+GigaSpaces XAP 16.4.0
+    Home: C:\Users\vase_\Desktop\api
+    Lookup Groups: xap-16.4.0
+    Lookup Locators: 
+Java:
+    Java Runtime: OpenJDK Runtime Environment 22.0.2+9 (Eclipse Adoptium)
+    Java VM: OpenJDK 64-Bit Server VM 22.0.2+9 (Eclipse Adoptium)
+    Java Home: C:\Users\vase_\.jdks\jdk-22\jdk-22.0.2+9
+    Memory: Currently used 68MB, Current heap size 77MB, Max heap size 4108MB
+Operating System: Windows 11 [version=10.0, architecture=amd64, processors=32]
+Process Id: 15132
+Username: vase_
+Network:
+    Local Host: [73N37-Lenovo/82.211.201.4] 
+    ethernet_32768: Realtek PCIe GbE Family Controller [IP addresses: fe80:0:0:0:65bd:da55:ad92:cca3%ethernet_32768 | 2a03:19c0:8009:2300:bdc2:83c8:adee:d154 | 2a03:19c0:8009:2300:a4ef:aaaa:d332:71e0 | 82.211.201.4]
+************************************************************************************************************************
+2026-08-14T19:30:26.256+02:00  INFO 15132 --- [myapp] [           main] com.sun.jini.reggie.GigaRegistrar        : Starting Lookup Service...
+2026-08-14T19:30:26.487+02:00  INFO 15132 --- [myapp] [           main] com.gigaspaces.lrmi                      : Listening to incoming connections on /82.211.201.4:8200 (reader threads: 4, writer threads: 4)
+2026-08-14T19:30:26.557+02:00  INFO 15132 --- [myapp] [           main] com.sun.jini.reggie.GigaRegistrar        : Started Lookup Service [duration=0.301s, groups=[xap-16.4.0], service-id=1e001c24-4d9e-4858-b503-afa8c4c414f2, locator=jini://82.211.201.4:4174/]
+2026-08-14T19:30:27.621+02:00  INFO 15132 --- [myapp] [           main] com.gigaspaces.space.mySpace             : Space started [duration=2.147s, url=/./mySpace?schema=default&groups=xap-16.4.0&state=started, policy=all-in-cache, persistency-mode=memory]
+2026-08-14T19:30:28.703+02:00  INFO 15132 --- [myapp] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43424634, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23b74c27, org.springframework.security.web.context.SecurityContextHolderFilter@f95a28, org.springframework.security.web.header.HeaderWriterFilter@4388206e, org.springframework.web.filter.CorsFilter@ca129b5, org.springframework.security.web.csrf.CsrfFilter@275f738c, org.springframework.security.web.authentication.logout.LogoutFilter@39dc7c0e, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@6e78383c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@136cb5b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38407b0e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@338bea5c, org.springframework.security.web.access.ExceptionTranslationFilter@1d983b15, org.springframework.security.web.access.intercept.AuthorizationFilter@3d5edd7]
+2026-08-14T19:30:29.276+02:00  INFO 15132 --- [myapp] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:hsqldb:mem:f331f6a9-889b-4f3a-a0c5-6e1a8dc20c17', username='sa'
+2026-08-14T19:30:30.145+02:00  INFO 15132 --- [myapp] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-08-14T19:30:30.145+02:00  INFO 15132 --- [myapp] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-08-14T19:30:30.147+02:00  INFO 15132 --- [myapp] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-08-14T19:30:30.180+02:00  INFO 15132 --- [myapp] [           main] c.e.myapp.config.SecurityConfigTest      : Started SecurityConfigTest in 7.762 seconds (process running for 10.652)
 ]]></system-out>
-    <system-err><![CDATA[2026-08-14 19:30:32,521  INFO [org.apache.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-auto-1"]
-2026-08-14 19:30:32,535  INFO [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
-2026-08-14 19:30:32,536  INFO [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-08-14 19:30:32,661  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
-2026-08-14 19:30:33,033  INFO [org.apache.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-auto-1"]
-2026-08-14 19:30:33,391  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\vase_\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
 ]]></system-err>
   </testcase>
-  <testcase name="Access secured endpoint without token" classname="API Access" time="0.045"/>
-  <testcase name="Write and read from jSpaces" classname="jSpaces Caching Behavior" time="0.134"/>
-  <testcase name="Update an existing item in jSpaces" classname="jSpaces Caching Behavior" time="0.015"/>
-  <testcase name="Read a non-existent item from jSpaces" classname="jSpaces Caching Behavior" time="0.014"/>
-  <testcase name="Delete an item from jSpaces" classname="jSpaces Caching Behavior" time="0.014"/>
-  <testcase name="Fail to write an item with an empty id" classname="jSpaces Caching Behavior" time="0.009"/>
+  <testcase name="testCorsPreflightIsAllowed" classname="com.example.myapp.config.SecurityConfigTest" time="0.01"/>
+  <testcase name="testSecuredEndpointReturns401WithoutToken" classname="com.example.myapp.config.SecurityConfigTest" time="0.013"/>
 </testsuite>
