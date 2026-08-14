@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.myapp.config.SecurityConfigTest" time="13.459" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.myapp.service.CacheServiceTest" time="1.475" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -78,56 +78,14 @@
     <property name="java.class.version" value="66.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[myapp] "/>
   </properties>
-  <testcase name="testPublicEndpointIsAccessible" classname="com.example.myapp.config.SecurityConfigTest" time="1.902">
-    <system-out><![CDATA[19:35:32.533 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.myapp.config.SecurityConfigTest]: SecurityConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-19:35:32.815 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.myapp.MyAppApplication for test class com.example.myapp.config.SecurityConfigTest
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.2.5)
-
-2026-08-14T19:35:34.519+02:00  INFO 56008 --- [myapp] [           main] c.e.myapp.config.SecurityConfigTest      : Starting SecurityConfigTest using Java 22.0.2 with PID 56008 (started by vase_ in C:\Users\vase_\Desktop\api)
-2026-08-14T19:35:34.523+02:00  INFO 56008 --- [myapp] [           main] c.e.myapp.config.SecurityConfigTest      : No active profile set, falling back to 1 default profile: "default"
-2026-08-14T19:35:37.473+02:00 ERROR 56008 --- [myapp] [           main] com.gigaspaces.security.openid           : Error while reading security properties - C:\Users\vase_\Desktop\api\config\security\security.properties (The system cannot find the path specified)
-2026-08-14T19:35:37.780+02:00  INFO 56008 --- [myapp] [           main] com.gigaspaces.container                 : Starting space...
-**************************************************** System Report *****************************************************
-GigaSpaces XAP 16.4.0
-    Home: C:\Users\vase_\Desktop\api
-    Lookup Groups: xap-16.4.0
-    Lookup Locators: 
-Java:
-    Java Runtime: OpenJDK Runtime Environment 22.0.2+9 (Eclipse Adoptium)
-    Java VM: OpenJDK 64-Bit Server VM 22.0.2+9 (Eclipse Adoptium)
-    Java Home: C:\Users\vase_\.jdks\jdk-22\jdk-22.0.2+9
-    Memory: Currently used 68MB, Current heap size 77MB, Max heap size 4108MB
-Operating System: Windows 11 [version=10.0, architecture=amd64, processors=32]
-Process Id: 56008
-Username: vase_
-Network:
-    Local Host: [73N37-Lenovo/82.211.201.4] 
-    ethernet_32768: Realtek PCIe GbE Family Controller [IP addresses: fe80:0:0:0:65bd:da55:ad92:cca3%ethernet_32768 | 2a03:19c0:8009:2300:bdc2:83c8:adee:d154 | 2a03:19c0:8009:2300:a4ef:aaaa:d332:71e0 | 82.211.201.4]
-************************************************************************************************************************
-2026-08-14T19:35:38.684+02:00  INFO 56008 --- [myapp] [           main] com.sun.jini.reggie.GigaRegistrar        : Starting Lookup Service...
-2026-08-14T19:35:39.038+02:00  INFO 56008 --- [myapp] [           main] com.gigaspaces.lrmi                      : Listening to incoming connections on /82.211.201.4:8201 (reader threads: 4, writer threads: 4)
-2026-08-14T19:35:39.131+02:00  INFO 56008 --- [myapp] [           main] com.sun.jini.reggie.GigaRegistrar        : Started Lookup Service [duration=0.447s, groups=[xap-16.4.0], service-id=95b24646-fac5-4505-be41-3b5b0b7b8208, locator=jini://82.211.201.4:50821/]
-2026-08-14T19:35:40.518+02:00  INFO 56008 --- [myapp] [           main] com.gigaspaces.space.mySpace             : Space started [duration=2.921s, url=/./mySpace?schema=default&groups=xap-16.4.0&state=started, policy=all-in-cache, persistency-mode=memory]
-2026-08-14T19:35:41.820+02:00  INFO 56008 --- [myapp] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c035744, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@327fe02d, org.springframework.security.web.context.SecurityContextHolderFilter@7d110e2d, org.springframework.security.web.header.HeaderWriterFilter@5ee1a359, org.springframework.web.filter.CorsFilter@69b45d36, org.springframework.security.web.csrf.CsrfFilter@119574a9, org.springframework.security.web.authentication.logout.LogoutFilter@372cd8fd, org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter@50bd37f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39dc7c0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@af9f43d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@649e1f4c, org.springframework.security.web.access.ExceptionTranslationFilter@664724e7, org.springframework.security.web.access.intercept.AuthorizationFilter@29174934]
-2026-08-14T19:35:42.532+02:00  INFO 56008 --- [myapp] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:hsqldb:mem:dc722aef-9f6d-401d-9dab-9a1a2be8b28e', username='sa'
-2026-08-14T19:35:43.555+02:00  INFO 56008 --- [myapp] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-08-14T19:35:43.555+02:00  INFO 56008 --- [myapp] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-08-14T19:35:43.557+02:00  INFO 56008 --- [myapp] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
-2026-08-14T19:35:43.599+02:00  INFO 56008 --- [myapp] [           main] c.e.myapp.config.SecurityConfigTest      : Started SecurityConfigTest in 10.34 seconds (process running for 13.459)
-]]></system-out>
-    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\vase_\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.13\byte-buddy-agent-1.14.13.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
-  </testcase>
-  <testcase name="testCorsPreflightIsAllowed" classname="com.example.myapp.config.SecurityConfigTest" time="0.014"/>
-  <testcase name="testSecuredEndpointReturns401WithoutToken" classname="com.example.myapp.config.SecurityConfigTest" time="0.018"/>
+  <testcase name="readFromCache_Success" classname="com.example.myapp.service.CacheServiceTest" time="1.379"/>
+  <testcase name="readFromCache_EmptyId" classname="com.example.myapp.service.CacheServiceTest" time="0.01"/>
+  <testcase name="writeToCache_NullId" classname="com.example.myapp.service.CacheServiceTest" time="0.006"/>
+  <testcase name="deleteFromCache_NullId" classname="com.example.myapp.service.CacheServiceTest" time="0.004"/>
+  <testcase name="readFromCache_NullId" classname="com.example.myapp.service.CacheServiceTest" time="0.005"/>
+  <testcase name="writeToCache_Success" classname="com.example.myapp.service.CacheServiceTest" time="0.032"/>
+  <testcase name="writeToCache_EmptyId" classname="com.example.myapp.service.CacheServiceTest" time="0.004"/>
+  <testcase name="deleteFromCache_Success" classname="com.example.myapp.service.CacheServiceTest" time="0.005"/>
+  <testcase name="deleteFromCache_EmptyId" classname="com.example.myapp.service.CacheServiceTest" time="0.004"/>
+  <testcase name="readFromCache_NotFound" classname="com.example.myapp.service.CacheServiceTest" time="0.004"/>
 </testsuite>

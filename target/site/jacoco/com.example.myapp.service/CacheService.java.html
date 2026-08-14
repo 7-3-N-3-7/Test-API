@@ -14,7 +14,7 @@ public class CacheService {
 <span class="fc" id="L14">    }</span>
 
     public void writeToCache(String id, String value) {
-<span class="pc bpc" id="L17" title="1 of 4 branches missed.">        if (id == null || id.trim().isEmpty()) {</span>
+<span class="fc bfc" id="L17" title="All 4 branches covered.">        if (id == null || id.trim().isEmpty()) {</span>
 <span class="fc" id="L18">            throw new IllegalArgumentException(&quot;ID cannot be null or empty&quot;);</span>
         }
 <span class="fc" id="L20">        CachedItem item = new CachedItem(id, value);</span>
@@ -22,8 +22,8 @@ public class CacheService {
 <span class="fc" id="L22">    }</span>
 
     public String readFromCache(String id) {
-<span class="pc bpc" id="L25" title="2 of 4 branches missed.">        if (id == null || id.trim().isEmpty()) {</span>
-<span class="nc" id="L26">            throw new IllegalArgumentException(&quot;ID cannot be null or empty&quot;);</span>
+<span class="fc bfc" id="L25" title="All 4 branches covered.">        if (id == null || id.trim().isEmpty()) {</span>
+<span class="fc" id="L26">            throw new IllegalArgumentException(&quot;ID cannot be null or empty&quot;);</span>
         }
 <span class="fc" id="L28">        CachedItem template = new CachedItem();</span>
 <span class="fc" id="L29">        template.setId(id);</span>
@@ -32,8 +32,8 @@ public class CacheService {
     }
 
     public void deleteFromCache(String id) {
-<span class="pc bpc" id="L35" title="2 of 4 branches missed.">        if (id == null || id.trim().isEmpty()) {</span>
-<span class="nc" id="L36">            throw new IllegalArgumentException(&quot;ID cannot be null or empty&quot;);</span>
+<span class="fc bfc" id="L35" title="All 4 branches covered.">        if (id == null || id.trim().isEmpty()) {</span>
+<span class="fc" id="L36">            throw new IllegalArgumentException(&quot;ID cannot be null or empty&quot;);</span>
         }
 <span class="fc" id="L38">        CachedItem template = new CachedItem();</span>
 <span class="fc" id="L39">        template.setId(id);</span>
