@@ -17,7 +17,12 @@ When('I visit the public hello page in the UI', async function (this: FullStackW
 });
 
 Then('I should see the message {string} on the screen', async function (this: FullStackWorld, expectedText: string) {
-  // Wait for the UI to display the exact text
+  // Print out the HTML that Playwright actually loaded!
+  const html = await this.page!.content();
+  console.log("\n--- WHAT PLAYWRIGHT SEES ---");
+  console.log(html);
+  console.log("----------------------------\n");
+
   const element = this.page!.locator(`text="${expectedText}"`);
   await expect(element).toBeVisible();
 });

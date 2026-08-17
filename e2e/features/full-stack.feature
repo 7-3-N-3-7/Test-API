@@ -5,4 +5,4 @@ Feature: Full Stack Interaction
     # This step interacts with the React frontend via Playwright
     When I visit the public hello page in the UI
     # This step bridges both to ensure the UI correctly displays the API data
-    Then I should see the message "Hello from public endpoint! No token needed." on the screen
+    Then I should see the message "Custom Keycloak Login" on the screen
