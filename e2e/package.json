@@ -11,8 +11,6 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@cucumber/cucumber": "^13.2.1",
-    "@playwright/test": "^1.62.1",
     "tsx": "^4.23.12"
   }
 }

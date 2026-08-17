@@ -1,10 +1,11 @@
 import { setWorldConstructor, World, IWorldOptions } from '@cucumber/cucumber';
 import { Browser, BrowserContext, Page, chromium } from '@playwright/test';
 
-export class CustomWorld extends World {
+export class FullStackWorld extends World {
   browser: Browser | null = null;
   context: BrowserContext | null = null;
   page: Page | null = null;
+  apiResponse: string | null = null;
 
   constructor(options: IWorldOptions) {
     super(options);
@@ -23,4 +24,4 @@ export class CustomWorld extends World {
   }
 }
 
-setWorldConstructor(CustomWorld);
+setWorldConstructor(FullStackWorld);
