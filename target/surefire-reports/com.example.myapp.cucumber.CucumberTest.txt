@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.myapp.cucumber.CucumberTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.137 s -- in com.example.myapp.cucumber.CucumberTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.830 s -- in com.example.myapp.cucumber.CucumberTest
