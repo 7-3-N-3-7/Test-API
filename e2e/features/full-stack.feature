@@ -1,8 +1,9 @@
 Feature: Full Stack Interaction
-  Scenario: Verify public API data appears in the UI
-    # This step interacts with the Java backend via HTTP
+  
+  Scenario: User can successfully log in and access secured data
     Given the backend API is up and running
-    # This step interacts with the React frontend via Playwright
     When I visit the public hello page in the UI
-    # This step bridges both to ensure the UI correctly displays the API data
-    Then I should see the message "Custom Keycloak Login" on the screen
+    And I log in with username "testuser" and password "password"
+    Then I should see the message "Welcome! You are logged in." on the screen
+    When I click the "Fetch Secured Data from Spring Boot" button
+    Then I should see the API response on the screen
