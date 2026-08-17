@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "NODE_OPTIONS='--import tsx' cucumber-js features/**/*.feature --import steps/**/*.ts --import support/**/*.ts"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^10.8.0",

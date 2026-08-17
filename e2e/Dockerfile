@@ -1,5 +1,5 @@
 # Official Playwright image includes Node.js and browser binaries
-FROM mcr.microsoft.com/playwright:v1.44.0-jammy
+FROM mcr.microsoft.com/playwright:v1.62.1-jammy
 
 WORKDIR /e2e
 
