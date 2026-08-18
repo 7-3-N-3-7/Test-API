@@ -1,0 +1,13 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS='--import tsx' cucumber-js features/**/*.feature --import steps/**/*.ts --import support/**/*.ts"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@playwright/test": "^1.44.0",
+    "tsx": "^4.0.0"
+  }
+}
